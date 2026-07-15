@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ミナトノイヌ (minato-no-inu) — 3D Character / VRM Modeler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Jua&family=Gothic+A1:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-mark">
+      <img src="images/icon_S.png" alt="icon">
+    </span>
+    <span>ミナトノイヌ<small>minato-no-inu</small></span>
+  </div>
+  <div style="display:flex; align-items:center;">
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="ja">JA</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ko">KO</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="メニュー" data-i18n-attr="menu_label:aria-label"><span></span><span></span><span></span></button>
+  </div>
+  <nav id="nav">
+    <a href="#work" data-i18n="nav_work">WORK</a>
+    <a href="#pricing" data-i18n="nav_pricing">PRICING</a>
+    <a href="#about" data-i18n="nav_about">ABOUT</a>
+    <a href="#contact" class="cta" data-i18n="nav_contact">見積り/お問い合わせ</a>
+  </nav>
+</header>
+
+<div class="translation-notice" id="translationNotice" hidden>
+  <div class="wrap translation-notice-inner">
+    <span data-i18n="translation_notice" data-i18n-html="true">このページは自動翻訳で作成されています。不自然な箇所があればご連絡ください。</span>
+    <button class="translation-notice-close" id="noticeCloseBtn" aria-label="閉じる" data-i18n-attr="notice_close_label:aria-label">✕</button>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-art">
+    <div class="hero-slideshow">
+      <img src="images/heroart/heroart_Tampopo.png" alt="top_Tampopo" class="active">
+      <img src="images/heroart/heroart_Neco.png" alt="top_Necobara">
+      <img src="images/heroart/heroart_Lemon.png" alt="top_Lemon">
+      <img src="images/heroart/heroart_Owana.png" alt="top_Owana">
+      <img src="images/heroart/heroart_Cian.png" alt="top_Cian">
+      <img src="images/heroart/heroart_Nagi.png" alt="top_Nagi">
+      <img src="images/heroart/heroart_Shiro.png" alt="top_Shiro">
+    </div>
+    <img class="hero-art-mobile" src="images/heroart/hero_art.png" alt="top_smp">
+    <div class="hero-art-overlay"></div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span><span data-i18n="hero_eyebrow">FREELANCE 3D MODELER</span></div>
+      <h1 class="hero-title" data-i18n="hero_title" data-i18n-html="true"><span class="accent-word">イラストそっくり</span>な<br>3Dボディを手に入れよう</h1>
+      <p class="hero-sub" data-i18n="hero_sub" data-i18n-html="true">Vtuber向けに3Dモデル（VRM）を制作しています。<br>三面図などの<strong>イラストを基に</strong>Vroidでは対応しきれない複雑な形状も再現することができる<strong>フルスクラッチモデル</strong>です。<br>Warudoなどのトラッキングソフトの使用方法もサポートしているので、3D化がはじめての方にも安心です。</p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary" data-i18n="hero_cta_primary">作品を見る</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="hero_cta_ghost">見積り/お問い合わせ</a>
+      </div>
+      <div class="availability-badge">
+        <span class="availability-dot"></span>
+        <!--  <span class="availability-dot is-closed"></span> 受付停止中はこっち -->
+        <span data-i18n="availability_hero">現在ご依頼受付中(次回納品目安:2027年2月〜)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <section class="section" id="work">
+    <div class="section-head reveal">
+      <span class="section-tag" data-i18n="work_tag">SELECTED WORK</span>
+      <div class="section-title" data-i18n="work_title">実績一覧</div>
+      <p class="section-desc" data-i18n="work_desc" data-i18n-html="true">これまでに制作した3Dモデル一覧です。</br>カードをクリックで詳細が確認できます。</p>
+    </div>
+
+    <div class="work-grid reveal">
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_001" data-name="藍晶シアン" data-cat="VRM"
+        data-video="https://youtu.be/xtWQzi03soU?si=rQwx1vJeq_ebcqBg" data-asset="---" data-option="---" data-yearmonth="2025/03">
+        <div class="work-thumb">
+          <img src="images/works/works_Ransho_thumb.png" alt="藍晶シアン_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Ransho1.png" alt="藍晶シアン1"></div>
+          <div class="slide"><img src="images/works/works_Ransho2.png" alt="藍晶シアン2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset004_name">藍晶シアン様</div>
+          <div class="work-cat">VRM</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_002" data-name="瑞乃しろ様" data-cat="VRM" data-asset="セーター" data-option="衣装オンオフ機能" data-yearmonth="2025/04">
+        <div class="work-thumb">
+          <img src="images/works/works_Shiro_thumb.png" alt="瑞乃しろ_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Shiro_1.png" alt="瑞乃しろ1"></div>
+          <div class="slide"><img src="images/works/works_Shiro_2.png" alt="瑞乃しろ2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset005_name">瑞乃しろ様</div>
+          <div class="work-cat">VRM</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_003" data-name="猫薔薇ねこ様" data-cat="VRM / VRChat"
+        data-video="https://www.youtube.com/live/aEWuNk5ylQ8?si=MISwNjLkQc4ubUIV" data-asset="---" data-option="パーフェクトシンク, 追加表情, VRChatギミック" data-yearmonth="2025/06">
+        <div class="work-thumb">
+          <img src="images/works/works_Neco_thumb.png" alt="猫薔薇ねこ_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Neco_1.png" alt="猫薔薇ねこ1"></div>
+          <div class="slide"><img src="images/works/works_Neco_2.png" alt="猫薔薇ねこ2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset006_name">猫薔薇ねこ様</div>
+          <div class="work-cat">VRM / VRChat</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_004" data-name="Lemon_773様" data-cat="VRM / VRChat / Asset"
+        data-video="https://youtu.be/G4kclbQyayU?si=QM8r-UTx9NoqKR6u" data-asset="ロングスカート, Scythe" data-option="パーフェクトシンク, 衣装オンオフ機能" data-yearmonth="2025/09">
+        <div class="work-thumb">
+          <img src="images/works/works_Lemon_thumb.png" alt="Lemon773_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Lemon_1.png" alt="Lemon1"></div>
+          <div class="slide"><img src="images/works/works_Lemon_2.png" alt="Lemon2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset007_name">Lemon_773様</div>
+          <div class="work-cat">VRM / VRChat / Asset</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_005" data-name="たんぽぽちゃん様" data-cat="VRM / VRChat / Asset"
+        data-video="https://www.youtube.com/live/OMCje6KkfrA?si=v3Y2o8PucywjSyxM" data-asset="将棋駒" data-option="パーフェクトシンク, 衣装オンオフ機能" data-yearmonth="2025/11">
+        <div class="work-thumb">
+          <img src="images/works/works_Tampopo_thumb.png" alt="たんぽぽちゃん_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Tampopo_1.png" alt="たんぽぽちゃん1"></div>
+          <div class="slide"><img src="images/works/works_Tampopo_2.png" alt="たんぽぽちゃん2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset008_name">たんぽぽちゃん様</div>
+          <div class="work-cat">VRM / VRChat / Asset</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_006" data-name="天凪なぎ様" data-cat="VRM"
+        data-asset="---" data-option="パーフェクトシンク" data-yearmonth="2026/02">
+        <div class="work-thumb">
+          <img src="images/works/works_Nagi_thumb.png" alt="天凪なぎ_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Nagi_1.png" alt="天凪なぎ1"></div>
+          <div class="slide"><img src="images/works/works_Nagi_2.png" alt="天凪なぎ2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset009_name">天凪なぎ様</div>
+          <div class="work-cat">VRM</div>
+        </div>
+      </div>
+
+      <div class="work-card" onclick="openWorkModal(this)"
+        data-id="COMMISSION_007" data-name="おわたおわな様" data-cat="VRM"
+        data-video="https://youtu.be/G4kclbQyayU?si=QM8r-UTx9NoqKR6u" data-asset="---" data-option="パーフェクトシンク, 追加表情" data-yearmonth="2026/04">
+        <div class="work-thumb">
+          <img src="images/works/works_Owana_thumb.png" alt="おわたおわな_サムネイル">
+        </div>
+        <div class="work-gallery" hidden>
+          <div class="slide"><img src="images/works/works_Owana_1.png" alt="おわたおわな1"></div>
+          <div class="slide"><img src="images/works/works_Owana_2.png" alt="おわたおわな2"></div>
+        </div>
+        <div class="work-info">
+          <div class="work-name" data-i18n="asset010_name">おわたおわな様</div>
+          <div class="work-cat">VRM</div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="placeholder-note reveal" data-i18n="work_note">注意書きはここに</div> -->
+  </section>
+
+  <!-- __________料金プランセクション__________ -->
+  <section class="section" id="pricing">
+    <div class="section-head reveal">
+      <span class="section-tag" data-i18n="pricing_tag">PRICING</span>
+      <div class="section-title" data-i18n="pricing_title">料金プラン</div>
+      <p class="section-desc" data-i18n="pricing_desc" data-i18n-html="true">用途や予算別に3つのプランを用意しています。<br>詳しくは下部記載の『つなぐ』でもご確認ください</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+
+      <div class="price-card">
+        <div class="price-name" data-i18n="price1_name">ライトプラン</div>
+        <div class="price-desc" data-i18n="price1_desc">上半身のみで出費を抑えたい場合はこちら *1</div>
+        <div class="price-amount"><span class="price-currency">¥</span>200,000<span class="price-unit" data-i18n="price1_unit"> / 1体</span></div>
+        <ul class="price-features">
+          <li data-i18n="price1_f1">上半身モデル</li>
+          <li data-i18n="price1_f2">あいうえお、喜怒哀楽、瞬き、ウインク</li>
+          <li data-i18n="price1_f3">上半身のすべての揺れもの</li>
+          <li class="not-included" data-i18n="price1_not1">フルトラッキング</li>
+          <li class="not-included" data-i18n="price1_not2">パーフェクトシンク</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost price-cta" data-i18n="price_cta">見積り相談</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge" data-i18n="price2_badge">おすすめ</div>
+        <div class="price-name" data-i18n="price2_name">スタンダードプラン</div>
+        <div class="price-desc" data-i18n="price2_desc">3Dデビューに必要な要素がすべてそろったプラン！</div>
+        <div class="price-amount"><span class="price-currency">¥</span>500,000<span class="price-unit" data-i18n="price2_unit"> / 1体</span></div>
+        <ul class="price-features">
+          <li data-i18n="price2_f1">全身モデル</li>
+          <li data-i18n="price2_f2">あいうえお、喜怒哀楽、瞬き、ウインク</li>
+          <li data-i18n="price2_f3">パーフェクトシンク</li>
+          <li data-i18n="price2_f4">すべての揺れもの</li>
+          <li class="not-included" data-i18n="price2_not1">追加表情</li>
+          <li class="not-included" data-i18n="price2_not2">VRChat対応</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary price-cta" data-i18n="price_cta">見積り相談</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-name" data-i18n="price3_name">フルカスタムプラン</div>
+        <div class="price-desc" data-i18n="price3_desc">希望の要素を盛り込んだり、逆にセットプランで予算を抑えたい場合に</div>
+        <div class="price-amount" data-i18n="price3_amount">要相談<span class="price-unit" data-i18n="price3_unit"> ～ 最大¥750,000</span></div>
+        <ul class="price-features">
+          <li data-i18n="price3_f1">スタンダードプランの全要素</li>
+          <li data-i18n="price3_f2">小物の追加・オンオフ機能</li>
+          <li data-i18n="price3_f3">赤面・キラキラ目などの追加表情</li>
+          <li data-i18n="price3_f4">MagicaCloth2を用いたなめらかな布表現 *2</li>
+          <li data-i18n="price3_f5">VRChat対応・ギミックの追加</li>
+        </ul>
+        <a href="#contact" class="btn btn-ghost price-cta" data-i18n="price_cta">見積り相談</a>
+      </div>
+
+    </div>
+    <div class="placeholder-note reveal" data-i18n="pricing_note" data-i18n-html="true">*1……パーフェクトシンクなどのオプションを追加することも可能です<br>*2……Warudoでのみ使用可能なファイル形式になります</div>
+  </section>
+
+  <!-- __________プロフィールセクション__________ -->
+  <section class="section" id="about">
+    <div class="section-head reveal">
+      <span class="section-tag" data-i18n="about_tag">PROFILE</span>
+      <div class="section-title" data-i18n="about_title">ミナトノイヌについて</div>
+    </div>
+
+    <div class="about-layout reveal">
+      <div class="about-text">
+        <img class="about-image" src="images/about_image.png" alt="ミナトノイヌについて">
+        <p data-i18n="about_p1" data-i18n-html="true"><strong>blenderとゲームを愛す、港街に住むイヌ。</strong><br>Vtuberとしての経験と再現度の高いモデリングスキルを活かして、Vtuber向けに3Dモデル制作を始めました。</p>
+        <p data-i18n="about_p2" data-i18n-html="true">『ココナラ』では開設以来、<strong>評価最高ランクのプラチナを維持</strong>し続けています！<br>「習うは一生」を座右の銘とし、noteでは<strong>VRM制作に関するTips</strong>を公開しています。</p>
+        <p data-i18n="about_p3">ソフトウェアの操作サポートから活用方法のご提案まで、丁寧でわかりやすい対応を心がけています。まずはお気軽にご相談ください。</p>
+      </div>
+
+      <div>
+        <div class="panel">
+          <div class="panel-head">SKILLS</div>
+          <div class="skill-row"><div class="skill-label"><span>VRM MODELING</span><span>100%</span></div><div class="skill-bar"><span style="width:100%"></span></div></div>
+          <div class="skill-row"><div class="skill-label"><span>VRCHAT</span><span>75%</span></div><div class="skill-bar"><span style="width:75%"></span></div></div>
+          <div class="skill-row"><div class="skill-label"><span>ASSET MODELLING</span><span>60%</span></div><div class="skill-bar"><span style="width:60%"></span></div></div>
+          <div class="skill-row"><div class="skill-label"><span>ENV ASSETS</span><span>studying...</span></div><div class="skill-bar"><span style="width:40%"></span></div></div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">SOFTWARE</div>
+          <div class="soft-tags">
+            <span class="soft-tag">Blender</span>
+            <span class="soft-tag">Unity</span>
+            <span class="soft-tag">Clip Studio Paint</span>
+            <span class="soft-tag">MagicaCloth2</span>
+            <span class="soft-tag">Warudo</span>
+            <span class="soft-tag">VRChat</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-card reveal">
+      <div class="contact-title" data-i18n="contact_title" data-i18n-html="true">まずは『つなぐ』より、<br>メッセージをどうぞ</div>
+      <div class="availability-badge availability-badge-contact">
+        <span class="availability-dot"></span>
+        <span data-i18n="availability_contact">現在ご依頼受付中</span>
+      </div>
+      <div class="contact-links">
+        <!-- <a href="mailto:contact@minato-no-inu.studio">MAIL</a> -->
+        <a href="https://tsunagu.cloud/users/minato_no_inu" target="_blank">つなぐ</a>
+        <a href="https://x.com/minato_no_inu" target="_blank">X (TWITTER)</a>
+        <a href="https://note.com/minato_no_inu" target="_blank">note</a>
+        <a href="https://forms.gle/wE6q54c8DHdfLNiC9" target="_blank">GoogleForm</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 作品カードのレイアウト -->
+<div class="modal-backdrop" id="workModal" onclick="if(event.target===this) closeWorkModal()">
+  <div class="mini-window">
+    <div class="window-titlebar">
+      <div class="window-title" id="modalId">ASSET_000</div>
+      <button class="window-close" onclick="closeWorkModal()" aria-label="閉じる" data-i18n-attr="modal_close_label:aria-label">✕</button>
+    </div>
+    <div class="window-viewport">
+      <div class="modal-slider" id="modalSlider">
+        <div class="slider-track" id="sliderTrack"></div>
+      </div>
+      <button class="slider-arrow prev" id="sliderPrev" aria-label="前の画像" data-i18n-attr="slider_prev_label:aria-label">‹</button>
+      <button class="slider-arrow next" id="sliderNext" aria-label="次の画像" data-i18n-attr="slider_next_label:aria-label">›</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-zoom-hint" id="zoomHintBtn" aria-label="拡大表示" data-i18n-attr="zoom_hint_label:aria-label">⤢</button>
+    </div>
+    <div class="window-body">
+      <div class="modal-name" id="modalName"></div>
+      <div class="modal-cat" id="modalCat"></div>
+      <div class="spec-row"><span>YEAR / MONTH</span><span id="modalYear"></span></div>
+      <div class="spec-row"><span>OPTION</span><span id="modalOption"></span></div>
+      <div class="spec-row"><span>+ASSET</span><span id="modalAsset"></span></div>
+      <div class="spec-row" id="modalVideoRow">
+        <span>REVEAL STREAM</span>
+        <span><a id="modalVideoLink" href="#" target="_blank" rel="noopener" data-i18n="modal_video_link_text">お披露目配信を見る</a></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 作品カード内の画像を拡大表示したとき -->
+<div class="image-lightbox" id="imageLightbox" onclick="if(event.target===this) closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()" aria-label="閉じる" data-i18n-attr="modal_close_label:aria-label">✕</button>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<footer class="wrap footer-main">
+  <div class="footer-row">
+    <span> 　© 2026 ミナトノイヌ (minato-no-inu)</span>
+  <span>3D CHARACTER MODELER 　</span>
+  </div>
+  <div class="footer-translation-note" id="footerTranslationNote" hidden data-i18n="translation_notice_footer" data-i18n-html="true"></div>
+</footer>
+
+<button class="back-to-top" id="backToTopBtn" aria-label="ページの先頭へ戻る">
+  <svg viewBox="0 0 24 24" fill="none"><path d="M6 15l6-6 6 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>
